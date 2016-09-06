@@ -1,0 +1,98 @@
+---
+# Transform Sass into css
+---
+
+$primary-color: #2E7D32;
+$primary-color-dark: #1B5E20;
+$primary-color-light: #66BB6A;
+$primary-color-text: #000000;
+$accent-color: #76FF03;
+$primary-text-color: #212121;
+$secondary-text-color: #727272;
+$divider-color: #B6B6B6;
+$button-color-disabled: $primary-color-dark;
+$button-bg-color-disabled: $primary-color-dark;
+
+@import "materialize";
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.big {
+  height: 80px;
+  line-height: 80px;
+}
+
+nav{
+  transition-duration: 0.5s;
+}
+
+.side-nav{
+  left: 0.01%;
+}
+
+.card{
+  &.hoverble{
+    box-shadow: none;
+    &:hover{
+      @extend .z-depth-2;
+    }
+  }
+}
+
+pre {
+  display: block;
+  padding: 11px;
+  margin: 0 0 11.5px;
+  font-size: 12px;
+  line-height: 1.846;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: #212121;
+  background-color: #f5f5f5;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+}
+pre code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border-radius: 0;
+}
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 3px;
+}
+.hspace {
+  height: 20px;
+}
+header {
+  margin-top: -70px;
+  background-image: url("https://dl.dropboxusercontent.com/u/47934939/header-bg.jpg");
+  background-repeat: none;
+  background-attachment: scroll;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  text-align: center;
+  color: #fff;
+  height: 400px;
+}
+header .intro-text {
+  padding-top: 250px;
+  padding-bottom: 50px;
+}

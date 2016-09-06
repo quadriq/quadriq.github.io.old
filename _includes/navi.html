@@ -1,0 +1,66 @@
+<div class="navbar-fixed">
+  <nav id="xnav" class="z-depth-1 main big">
+    <div class="container container-large">
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo">Logo</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          {% assign navigation_pages = site.html_pages | sort : 'navigation_weight' %}
+          {% for p in navigation_pages %}
+            {% if p.navigation_weight %}
+              <li>
+                <a href="{{ p.url }}" {% if p.url == page.url %} class="active" {% endif %}>
+                  {{ p.title }}
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+
+        <ul class="side-nav" id="mobile-demo">
+          {% assign navigation_pages = site.html_pages | sort : 'navigation_weight' %}
+          {% for p in navigation_pages %}
+            {% if p.navigation_weight %}
+              <li>
+                <a href="{{ p.url }}" {% if p.url == page.url %} class="active" {% endif %}>
+                  {{ p.title }}
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+{% if page.url == "/" %}
+  <style media="screen">
+    nav {
+      position: absolute;
+      top: 0;
+      z-index: 10;
+      background: #fff;
+      width: 100%;
+      background: transparent;
+      transition-duration: 1s;
+    }
+
+  </style>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="intro-text">
+        <div class="intro-lead-in">My name is Konstantin</div>
+        <div class="intro-heading">I am a Web Developer</div>
+        <a href="#services" class="page-scroll btn btn-xl" data-scroll>About me</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- <script>::  see _includes/js.html-->
+
+{% endif %}
