@@ -10,10 +10,10 @@ permalink: /blog
   {% for post in site.posts %}
     <div class="row">
       <div class="col m12">
-        <div class="card">
+        <div class="card hoverble_1">
           <div class="card-content">
             <span class="card-title green-text darken-3">
-              {{ post.title | escape }}
+              <a  href="{{ post.url }}">{{ post.title | escape }}</a>
             </span>
             <p> {{ post.content | strip_html | truncatewords:80}}</p>
           </div>
@@ -24,7 +24,7 @@ permalink: /blog
                 {{ post.date | date: "%B %-d, %Y" }}</span>
             </div>
             <div class="right-align">
-              <a class="waves-effect waves-light btn" href="{{ post.url }}">Read more</a>
+              <a class="waves-effect waves-light btn white-text" href="{{ post.url }}">Read more</a>
             </div>
           </div>
         </div>

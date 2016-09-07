@@ -12,7 +12,7 @@
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+# in the templates via {{ site.myvariable }}
 title: "quiadriq.com - DevOps, Mobile, Software"
 email: "info@quadriq.com"
 description: "Development with heart"
@@ -20,7 +20,6 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://quadriq.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
-permalink:        /blog/:year/:month/:day/:title/
 
 # Build settings
 markdown: kramdown
