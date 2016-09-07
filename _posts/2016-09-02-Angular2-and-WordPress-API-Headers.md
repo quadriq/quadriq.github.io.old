@@ -5,6 +5,7 @@ comments: true
 date:   2016-09-02 12:00:00 +0000
 permalink: /:year/:month/:day/:title/
 ---
+
 By developing the Angular2 App its usual running on localhost... e.g. `localhost:5555` or `localhost:3000`, depending on your development config
 
 If you are using [json-api](https://wordpress.org/plugins/json-api/other_notes/) plugin for WordPress and trying to retrieve something like `GET www.wp-example.host?json=get_recent_post` from you test localhost Angular2 instance, you would probably run into this kind of error:

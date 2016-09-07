@@ -4,6 +4,7 @@ date:   2016-09-02 13:00:00 +0000
 permalink: /:year/:month/:day/:title/
 comments: true
 ---
+
 # Export android library as .aar file
 
 make changes in `build.gradle`, tell gradle - you project is a library
