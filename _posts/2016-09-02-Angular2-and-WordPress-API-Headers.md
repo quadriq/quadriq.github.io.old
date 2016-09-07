@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: post
 title:  "Angular2 and WordPress API Headers"
+comments: true
 date:   2016-09-02 12:00:00 +0000
 permalink: /:year/:month/:day/:title/
 ---

@@ -1,49 +1,58 @@
 ---
 layout: default
 ---
-<div class="card z-depth-0 no-margin">
-<div class="container">
-<div class="section">
-    <div class="row">
-        <div class="col s12">
-            <div class="card-content">
-                <div class="card-title center-align"><h2 class="thin blue-text">{{ page.title }}</h2></div>
-                <h5 class="center-align grey-text text-darken-1 thin">Published at {{ page.date | date: "%B %-d, %Y" }}</h5>
-                <br/>
-                <div class="divider"></div>
-                <article class="post-categories center-align">
-                    <div class="chip teal white-text">Categories</div>
-                    {% for cat in page.categories %}<div class="chip">{{ cat }}</div> {% endfor %}
-                </article>
-                <article class="grey-text text-darken-2 post-content">
-                    {{ content }}
-                </article>
-                <article class="grey-text text-darken-2">
-                    {% for cat in page.categories %}
-                        {% if site.categories.[cat].size > 1 %}
-                            <aside class="related">
-                                <ul class="collection with-header">
-                                    <li class="collection-header"><h5 class="light">Related posts in <span class="green-text">{{ cat }}</span> category</h5></li>
-                            {% for post in site.categories.[cat] limit:5 %}
-                                {% if post.title != page.title %}
-                                        <a href="{{ post.url }}" class="collection-item avatar">
-                                            <i class="material-icons circle green">loyalty</i>
-                                            <span class="title light">{{ post.date | date: "%B %-d, %Y" }}</span>
-                                            <p class="light">{{ post.title }}</p>
-                                        </a>
-                                {% endif %}
-                            {% endfor %}
-                                </ul>
-                            </aside>
-                        {% endif %}
-                    {% endfor %}
-                </article>
-                <article class="post-comment">
-                    {% include comments.html %}
-                </article>
-            </div>
-        </div>
+
+<br/>
+
+<div class="post-title">
+    <div class="logo">
+        {% if page.logo %}
+            <i class="fa fa-{{ page.logo }} fa-fw"></i>
+        {% else %}
+            <i class="fa fa-question-circle fa-fw"></i>
+        {% endif %}
+    </div>
+    <div class="title">
+        <h2>{{ page.title }}</h2>
+        {% if page.date %}
+        <span>
+            <time datetime="{{ page.date | date_to_xmlschema }}">
+                {{ page.date | date: site.date_format }}
+                {% if site.disqus_shortname %}
+                    &middot;
+                    <a href="{{ site.url }}{{ page.url }}index.html#disqus_thread" data-disqus-identifier="{{ page.url }}"></a>
+                    {% if page.update_date %}
+                        &middot;
+                        Updated {{ page.update_date | date: site.date_format }}
+                    {% endif %}
+                {% endif %}
+            </time>
+        </span>
+        {% endif %}
     </div>
 </div>
+
+<div>
+    <br/>
 </div>
-</div>
+
+{{ content }}
+
+{% if page.comments %}
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'perfectlyrandom'; // required: replace example with your forum shortname
+        // var disqus_developer = 1; // Comment out when the site is live
+        var disqus_identifier = "{{ page.url }}";
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+{% endif %}

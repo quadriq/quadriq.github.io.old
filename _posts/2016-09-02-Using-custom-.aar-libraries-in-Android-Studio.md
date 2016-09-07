@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 date:   2016-09-02 13:00:00 +0000
 permalink: /:year/:month/:day/:title/
+comments: true
 ---
-# How to export android library as .aar file
+# Export android library as .aar file
 
 make changes in `build.gradle`, tell gradle - you project is a library
 
@@ -17,13 +18,15 @@ Find output in
 
     PROJECT / app / build / outputs / aar / app-release.aar
 
+That's it! Now you have your `aar`~
+
 # Import `aar` library into project
 
-if the name of the aar file is `maplib.aar`
+Assuming, the name of the aar file is `maplib.aar`
 
 * copy this file to your app `libs` dir
 
-* build.gradle
+* change `build.gradle`
 
 ```
 allprojects {
@@ -36,7 +39,7 @@ allprojects {
 }
 ```
 
-* app/build.gradle
+* changes `app/build.gradle`
 
 ```
 dependencies {
@@ -45,3 +48,5 @@ dependencies {
     compile 'com.quadriq.maplib:maplib@aar'
 }
 ```
+
+Rebuild project. Done!
