@@ -12,7 +12,7 @@ permalink: /about
 
 ## DevOps
 
-What Hosting provider? Whith docker support or without? A Backend Framework? Frontent? How to configure my Server? Do I need Continuous Integration? Sometimes its hard to find an answer at the beginning of the project. We can help you. We have outstanding experience in `Puppet`, `Foreman`, `CentOS Linux`, `Continuous Integration`
+What Hosting provider? A Backend Framework? Frontent? How to configure my Server? Do I need Continuous Integration? Sometimes its hard to find an answer at the beginning of the project. We can help you. We have outstanding experience in `Puppet`, `Foreman`, `CentOS Linux`, `Continuous Integration`
 
 ## Web & mobile
 
