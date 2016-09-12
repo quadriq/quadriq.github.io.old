@@ -22,7 +22,7 @@ This is our key area, especial Android Apps! More that 1,000,000 users around th
 
 We love open source. We contribute to several Open Source projects and have some own developments.
 
-e.g. The content of this web site is build with `jekyll` on `GitHub Pagaes`. [Here is the open project](https://github.com/quadriq/quadriq.github.io) with all
+e.g. The content of this web site is build with `jekyll` on `GitHub Pages`. [Here is the open project](https://github.com/quadriq/quadriq.github.io) with all
 the code, style etc..
 
 
