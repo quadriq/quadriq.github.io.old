@@ -24,6 +24,7 @@ group :development, :test do
  gem "minima"
  gem 'redcarpet'
  gem 'rouge'
+ gem 'jekyll-seo-tag'
 end
 
 group :production do
@@ -31,4 +32,5 @@ group :production do
  gem 'redcarpet'
  gem 'rouge'
  gem "github-pages", group: :jekyll_plugins
+ gem 'jekyll-seo-tag'
 end
