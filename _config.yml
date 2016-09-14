@@ -15,11 +15,11 @@
 # in the templates via {{ site.myvariable }}
 title: "quiadriq.com - DevOps, Mobile, Software"
 email: "info@quadriq.com"
-description: "Development with heart"
+description: "DevOps, Mobile, Software"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://quadriq.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+# twitter_username: jekyllrb
+# github_username:  jekyll
 
 # Build settings
 markdown: kramdown
@@ -32,3 +32,4 @@ include: ['_pages']
 
 gems:
   - jekyll-seo-tag
+  - jekyll-sitemap

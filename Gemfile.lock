@@ -137,6 +137,7 @@ DEPENDENCIES
   github-pages
   jekyll (= 3.2.1)
   jekyll-seo-tag
+  jekyll-sitemap
   minima
   redcarpet
   rouge

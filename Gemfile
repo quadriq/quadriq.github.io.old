@@ -25,6 +25,7 @@ group :development, :test do
  gem 'redcarpet'
  gem 'rouge'
  gem 'jekyll-seo-tag'
+ gem 'jekyll-sitemap'
 end
 
 group :production do
@@ -33,4 +34,5 @@ group :production do
  gem 'rouge'
  gem "github-pages", group: :jekyll_plugins
  gem 'jekyll-seo-tag'
+ gem 'jekyll-sitemap'
 end
