@@ -1,0 +1,36 @@
+---
+layout: default
+title: Blog
+navigation_weight: 2
+permalink: /blog
+lang: de
+---
+
+
+<ul class="post-list">
+  {% for post in site.posts %}
+    <div class="row">
+      <div class="col m12">
+        <div class="card hoverble_1">
+          <div class="card-content">
+            <span class="card-title green-text darken-3">
+              <a  href="{{ post.url }}">{{ post.title | escape }}</a>
+            </span>
+            <p> {{ post.content | strip_html | truncatewords:80}}</p>
+          </div>
+          <div class="card-action">
+            <div class="col m6">
+              <i class="tiny material-icons">query_builder</i>
+              <span>Published at
+                {{ post.date | date: "%B %-d, %Y" }}</span>
+            </div>
+            <div class="right-align">
+              <a class="waves-effect waves-light btn white-text" href="{{ post.url }}">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  {% endfor %}
+</ul>

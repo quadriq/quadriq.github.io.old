@@ -14,11 +14,13 @@
           {% assign navigation_pages = site.html_pages | sort : 'navigation_weight' %}
           {% for p in navigation_pages %}
             {% if p.navigation_weight %}
-              <li>
-                <a href="{{ p.url }}" {% if p.url == page.url %} class="active" {% endif %}>
-                  {{ p.title }}
-                </a>
-              </li>
+              {% if p.lang contains "de" %}
+                <li>
+                  <a href="{{ p.url }}" {% if p.url == page.url %} class="active" {% endif %}>
+                    {{ p.title }}
+                  </a>
+                </li>
+              {% endif %}
             {% endif %}
           {% endfor %}
         </ul>
@@ -27,11 +29,13 @@
           {% assign navigation_pages = site.html_pages | sort : 'navigation_weight' %}
           {% for p in navigation_pages %}
             {% if p.navigation_weight %}
-              <li>
-                <a href="{{ p.url }}" {% if p.url == page.url %} class="active" {% endif %}>
-                  {{ p.title }}
-                </a>
-              </li>
+              {% if p.lang contains "de" %}
+                <li>
+                  <a href="{{ p.url }}" {% if p.url == page.url %} class="active" {% endif %}>
+                    {{ p.title }}
+                  </a>
+                </li>
+              {% endif %}
             {% endif %}
           {% endfor %}
         </ul>
@@ -59,7 +63,7 @@
   <header>
     <div class="container">
       <div class="intro-text">
-        <div class="intro-lead-in">Welcome to quadriq.com</div>
+        <div class="intro-lead-in">Herzlich Willkommen auf quadriq.com</div>
         <br/>
         <div class="intro-heading"></div>
         <a href="/about" class="page-scroll btn btn-xl" data-scroll>Projects</a>

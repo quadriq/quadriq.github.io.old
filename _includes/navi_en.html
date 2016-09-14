@@ -4,7 +4,7 @@
       <div class="nav-wrapper">
         <a class="hide-on-med-and-down">
           <img src="{{ site.baseurl}}/assets/images/logo.png" class="header_img"></a>
-        <a href="/de" class="brand-logo">
+        <a href="/en" class="brand-logo">
           Quadriq
         </a>
         <a href="#" data-activates="mobile-demo" class="button-collapse">
@@ -14,11 +14,13 @@
           {% assign navigation_pages = site.html_pages | sort : 'navigation_weight' %}
           {% for p in navigation_pages %}
             {% if p.navigation_weight %}
-              <li>
-                <a href="{{ p.url }}" {% if p.url == page.url %} class="active" {% endif %}>
-                  {{ p.title }}
-                </a>
-              </li>
+              {% if p.lang contains "en" %}
+                <li>
+                  <a href="{{ p.url }}" {% if p.url == page.url %} class="active" {% endif %}>
+                    {{ p.title }}
+                  </a>
+                </li>
+              {% endif %}
             {% endif %}
           {% endfor %}
         </ul>
@@ -27,11 +29,13 @@
           {% assign navigation_pages = site.html_pages | sort : 'navigation_weight' %}
           {% for p in navigation_pages %}
             {% if p.navigation_weight %}
-              <li>
-                <a href="{{ p.url }}" {% if p.url == page.url %} class="active" {% endif %}>
-                  {{ p.title }}
-                </a>
-              </li>
+              {% if p.lang contains "en" %}
+                <li>
+                  <a href="{{ p.url }}" {% if p.url == page.url %} class="active" {% endif %}>
+                    {{ p.title }}
+                  </a>
+                </li>
+              {% endif %}
             {% endif %}
           {% endfor %}
         </ul>
@@ -40,7 +44,7 @@
   </nav>
 </div>
 
-{% if page.url == "/de" %}
+{% if page.url == "/en/index.html" %}
   <style media="screen">
     nav {
       position: absolute;
@@ -58,7 +62,7 @@
   <header>
     <div class="container">
       <div class="intro-text">
-        <div class="intro-lead-in">Herzlich Willkommen auf quadriq.com</div>
+        <div class="intro-lead-in">Welcome to quadriq.com</div>
         <br/>
         <div class="intro-heading"></div>
         <a href="/about" class="page-scroll btn btn-xl" data-scroll>Projekte</a>

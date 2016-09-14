@@ -1,8 +1,9 @@
 ---
-layout: default
+layout: default_en
 title: About
 navigation_weight: 5
-permalink: /about
+permalink: /en/about
+lang: en
 ---
 
 # What is Quadriq?

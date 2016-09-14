@@ -1,3 +1,0 @@
-# IT Project Management
-
-On
