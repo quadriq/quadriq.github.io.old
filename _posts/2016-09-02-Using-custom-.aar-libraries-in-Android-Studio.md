@@ -5,7 +5,7 @@ permalink: /:year/:month/:day/:title/
 comments: true
 ---
 
-# Export android library as .aar file
+## Export android library as .aar file
 
 make changes in `build.gradle`, tell gradle - you project is a library
 
@@ -21,7 +21,7 @@ Find output in
 
 That's it! Now you have your `aar`~
 
-# Import `aar` library into project
+## Import `aar` library into project
 
 Assuming, the name of the aar file is `maplib.aar`
 
