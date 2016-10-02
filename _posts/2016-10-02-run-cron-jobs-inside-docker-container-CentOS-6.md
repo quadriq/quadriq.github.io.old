@@ -14,8 +14,8 @@ Change into contaner with `docker run -it CONTAINER-ID bash`.
 # First we need to install some packages
 yum -y install vixie-cron rsyslog
 
-# comment out a line inside rsyslog conf, containing $ModLoad imuxsock
-sed -i '/$ModLoad imuxsock/s/^/#/' /etc/rsyslog.conf
+# comment out a line inside rsyslog conf, containing $modLoad imklog
+sed -i '/$modLoad imklog/s/^/#/' /etc/rsyslog.conf
 
 # startup services
 /etc/init.d/rsyslog start
