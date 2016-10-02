@@ -1,5 +1,3 @@
-run-cron-and-rsyslog-inside-docker-container.md
-
 ---
 layout: post
 title:  "Run cron-jobs inside docker container, CentOS 6"
