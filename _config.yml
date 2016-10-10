@@ -17,7 +17,7 @@ title: "quiadriq.com - DevOps, Mobile, Software"
 email: "info@quadriq.com"
 description: "DevOps, Mobile, Software"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://quadriq.com" # the base hostname & protocol for your site
+url: "http://quadriq.de" # the base hostname & protocol for your site
 # twitter_username: jekyllrb
 # github_username:  jekyll
 
